@@ -1,0 +1,99 @@
+.header {
+  min-height: var(--header-height);
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  border-bottom: var(--rule);
+  background: var(--color-paper);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: 0 var(--space-9);
+  border-right: var(--rule);
+  text-decoration: none;
+  min-height: var(--header-height);
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+}
+
+.nav {
+  display: flex;
+  align-items: stretch;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-9);
+  font-weight: 500;
+  text-decoration: none;
+  border-right: var(--rule);
+  transition: background var(--dur-fast) var(--ease);
+}
+
+.navLink:hover {
+  background: var(--color-blue-tint);
+  color: var(--color-ink);
+}
+
+.navLink[aria-current='page'] {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-weight: 600;
+}
+
+.navLink[aria-current='page']:focus-visible {
+  outline-color: var(--color-blue-soft);
+}
+
+.slot {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+/* Narrow screens: brand, navigation and actions each get their own row. */
+@media (max-width: 760px) {
+  .brand {
+    flex: 1 0 auto;
+    border-right: 0;
+  }
+
+  .nav {
+    order: 2;
+    flex: 1 0 100%;
+    border-top: var(--rule);
+  }
+
+  .navLink {
+    flex: 1;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 var(--space-4);
+  }
+
+  .navLink:last-child {
+    border-right: 0;
+  }
+
+  .slot {
+    order: 3;
+    flex: 1 0 100%;
+    min-height: 48px;
+    border-top: var(--rule);
+  }
+
+  .slot:empty {
+    display: none;
+  }
+}

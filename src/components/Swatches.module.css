@@ -1,0 +1,42 @@
+.row {
+  display: grid;
+  grid-template-columns: repeat(var(--count, 4), minmax(0, 1fr));
+  border: var(--rule);
+  gap: var(--rule-width);
+  background: var(--color-ink);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cell {
+  background: var(--color-paper);
+  display: flex;
+  flex-direction: column;
+}
+
+.chip {
+  height: 44px;
+  border-bottom: var(--rule);
+}
+
+.hex {
+  padding: 5px 6px;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+}
+
+.compact .chip {
+  height: 30px;
+  border-bottom: 0;
+}
+
+.mini {
+  display: inline-flex;
+  border: var(--rule);
+}
+
+.miniChip {
+  width: 14px;
+  height: 14px;
+}
