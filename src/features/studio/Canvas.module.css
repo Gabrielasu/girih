@@ -1,0 +1,133 @@
+.frame {
+  flex: 1 1 auto;
+  min-height: 520px;
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  grid-template-rows: 22px minmax(0, 1fr);
+}
+
+.corner {
+  border-right: var(--rule);
+  border-bottom: var(--rule);
+}
+
+.rulerX {
+  border-bottom: var(--rule);
+  background-image:
+    repeating-linear-gradient(90deg, var(--color-ink) 0 1px, transparent 1px 10px),
+    repeating-linear-gradient(90deg, var(--color-ink) 0 1px, transparent 1px 50px);
+  background-size:
+    100% 6px,
+    100% 12px;
+  background-repeat: no-repeat;
+  background-position:
+    bottom left,
+    bottom left;
+}
+
+.rulerY {
+  border-right: var(--rule);
+  background-image:
+    repeating-linear-gradient(180deg, var(--color-ink) 0 1px, transparent 1px 10px),
+    repeating-linear-gradient(180deg, var(--color-ink) 0 1px, transparent 1px 50px);
+  background-size:
+    6px 100%,
+    12px 100%;
+  background-repeat: no-repeat;
+  background-position:
+    top right,
+    top right;
+}
+
+.sheet {
+  position: relative;
+  background: var(--color-paper);
+  padding: 26px;
+  display: flex;
+}
+
+.mark {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 0 solid var(--color-ink);
+}
+
+.tl {
+  left: 8px;
+  top: 8px;
+  border-left-width: 1px;
+  border-top-width: 1px;
+}
+
+.tr {
+  right: 8px;
+  top: 8px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+}
+
+.bl {
+  left: 8px;
+  bottom: 8px;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.br {
+  right: 8px;
+  bottom: 8px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+  min-height: 470px;
+  display: block;
+  outline: var(--rule);
+}
+
+.caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.contrast {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.badge {
+  padding: 3px 7px;
+  background: var(--color-ink);
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.badgeLow {
+  background: var(--color-danger);
+}
+
+@media (max-width: 760px) {
+  .frame {
+    min-height: 360px;
+  }
+
+  .sheet {
+    padding: var(--space-9);
+  }
+
+  .svg {
+    min-height: 300px;
+  }
+}

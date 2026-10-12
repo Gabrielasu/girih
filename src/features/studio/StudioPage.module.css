@@ -1,0 +1,122 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--text-md);
+}
+
+.headerInfo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-9);
+  gap: var(--space-6);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-mono-tight);
+  text-transform: uppercase;
+  color: var(--color-muted);
+  min-width: 160px;
+}
+
+.headerActions {
+  display: flex;
+  align-items: stretch;
+}
+
+.randomize {
+  border-left: var(--rule);
+}
+
+.body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 840px;
+}
+
+.tools {
+  flex: 1 0 280px;
+  max-width: 300px;
+  border-right: var(--rule);
+}
+
+.main {
+  flex: 999 1 560px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-10) var(--space-10) var(--space-8);
+  gap: var(--space-7);
+}
+
+.params {
+  flex: 1 0 270px;
+  max-width: 300px;
+  border-left: var(--rule);
+}
+
+/* When the columns wrap on narrow screens, let the panels span the width. */
+@media (max-width: 1100px) {
+  .tools,
+  .params {
+    max-width: none;
+    border-left: 0;
+    border-right: 0;
+    border-top: var(--rule);
+  }
+
+  .main {
+    order: -1;
+    flex-basis: 100%;
+  }
+}
+
+.tools,
+.params {
+  display: flex;
+  flex-direction: column;
+}
+
+.tools > *,
+.params > * {
+  flex: 1;
+}
+
+.toast {
+  position: fixed;
+  right: var(--space-9);
+  bottom: var(--space-9);
+  z-index: 30;
+  max-width: 340px;
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: var(--tracking-mono-tight);
+  box-shadow: 4px 4px 0 var(--color-blue);
+}
+
+.toast:empty {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .headerInfo {
+    padding: 0 var(--space-6);
+    min-width: 0;
+  }
+
+  .headerActions > * {
+    flex: 1;
+  }
+
+  .randomize {
+    padding: 0 var(--space-6);
+  }
+
+  .main {
+    padding: var(--space-7) var(--space-6);
+  }
+}

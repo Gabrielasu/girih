@@ -1,0 +1,52 @@
+.group {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
+}
+
+/* Joined: one outer rule, hairlines between cells. */
+.joined {
+  border: var(--rule);
+  gap: var(--rule-width);
+  background: var(--color-ink);
+}
+
+/* Gapped: each cell carries its own rule. */
+.gapped {
+  gap: var(--space-2);
+}
+
+.option {
+  border: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  min-height: 34px;
+  padding: 0;
+  transition:
+    background var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.gapped .option {
+  border: var(--rule);
+}
+
+.option:hover {
+  background: var(--color-blue-tint);
+}
+
+.option[aria-pressed='true'] {
+  background: var(--selected-bg, var(--color-blue));
+  color: var(--selected-fg, var(--color-white));
+}
+
+.option[aria-pressed='true']:focus-visible {
+  outline-color: var(--color-blue-soft);
+}
+
+.inkSelected {
+  --selected-bg: var(--color-ink);
+  --selected-fg: var(--color-paper);
+}

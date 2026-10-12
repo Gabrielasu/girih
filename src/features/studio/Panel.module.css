@@ -1,0 +1,128 @@
+/* Shared styles for the Studio side panels. */
+.aside {
+  background: var(--color-paper);
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  padding: var(--space-7) var(--space-8) var(--space-8);
+  border-bottom: var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.sectionLast {
+  border-bottom: 0;
+}
+
+.pushDown {
+  margin-top: auto;
+  border-bottom: 0;
+}
+
+.tight {
+  gap: var(--space-3);
+}
+
+.hint {
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+/* 01 Grid */
+.gridOption {
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+/* 02 Symmetry */
+.symOption {
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 7px var(--space-3);
+  text-align: left;
+}
+
+.symKey {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.symLabel {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+/* 03 Motif */
+.motifOption {
+  aspect-ratio: 1 / 1;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  align-items: stretch;
+}
+
+.motifOption svg {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+}
+
+.motifName {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-align: left;
+}
+
+/* 04 Seed */
+.seedRow {
+  display: flex;
+  border: var(--rule);
+}
+
+.seedValue {
+  flex: 1;
+  padding: var(--space-4) var(--space-5);
+  font-family: var(--font-mono);
+  font-size: 15px;
+  letter-spacing: 0.08em;
+}
+
+.seedButton {
+  border-left: var(--rule);
+}
+
+/* 08 Recipe */
+.recipe {
+  padding: var(--space-5);
+  background: var(--color-ink);
+  color: var(--color-code-fg);
+  font: 400 11px/1.65 var(--font-mono);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.exportRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: var(--rule);
+  gap: var(--rule-width);
+  background: var(--color-ink);
+}
+
+.exportRow > button {
+  height: 36px;
+  font-size: var(--text-sm);
+}

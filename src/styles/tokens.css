@@ -1,0 +1,71 @@
+/*
+ * Design tokens. Every color, font, size and rule in the app comes from here.
+ * Component styles reference these variables and never hard code values.
+ */
+:root {
+  /* Color */
+  --color-ink: #121212;
+  --color-paper: #fbfbfa;
+  --color-ground: #e4e5e1;
+  --color-blue: #2135f5;
+  --color-blue-tint: #edeef9;
+  --color-blue-soft: #c9ceff;
+  --color-blue-pale: #aeb6ff;
+  --color-white: #ffffff;
+  --color-muted: #4a4a48;
+  --color-muted-2: #5a5a57;
+  --color-body-2: #3a3a38;
+  --color-danger: #b3261e;
+  --color-code-fg: #e4e5e1;
+
+  /* Type */
+  --font-display: 'Syne', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Schibsted Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Martian Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --text-2xs: 9.5px;
+  --text-xs: 10.5px;
+  --text-sm: 12px;
+  --text-md: 13px;
+  --text-base: 15px;
+  --text-lg: 16px;
+  --text-xl: 18px;
+
+  --tracking-mono: 0.06em;
+  --tracking-mono-tight: 0.04em;
+
+  /* Space */
+  --space-1: 4px;
+  --space-2: 6px;
+  --space-3: 8px;
+  --space-4: 10px;
+  --space-5: 12px;
+  --space-6: 14px;
+  --space-7: 16px;
+  --space-8: 18px;
+  --space-9: 20px;
+  --space-10: 22px;
+  --space-11: 24px;
+  --space-12: 28px;
+  --space-13: 32px;
+  --space-14: 40px;
+  --space-15: 48px;
+  --space-16: 56px;
+
+  /* Rules */
+  --rule-width: 1px;
+  --rule: var(--rule-width) solid var(--color-ink);
+  --rule-dashed: var(--rule-width) dashed var(--color-ink);
+
+  /* Layout */
+  --header-height: 60px;
+  --page-max: 1340px;
+
+  /* Motion */
+  --ease: ease;
+  --dur-fast: 0.12s;
+  --dur-base: 0.2s;
+
+  /* Focus */
+  --focus-ring: 2px solid var(--color-blue);
+}

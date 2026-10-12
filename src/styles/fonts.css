@@ -1,0 +1,15 @@
+/*
+ * Self hosted Google Fonts (via Fontsource), latin subsets only, all with
+ * font-display: swap. Self hosting avoids a third party request and keeps
+ * the app working offline.
+ */
+@import '@fontsource/syne/latin-600.css';
+@import '@fontsource/syne/latin-700.css';
+@import '@fontsource/syne/latin-800.css';
+@import '@fontsource/schibsted-grotesk/latin-400.css';
+@import '@fontsource/schibsted-grotesk/latin-400-italic.css';
+@import '@fontsource/schibsted-grotesk/latin-500.css';
+@import '@fontsource/schibsted-grotesk/latin-600.css';
+@import '@fontsource/schibsted-grotesk/latin-700.css';
+@import '@fontsource/martian-mono/latin-400.css';
+@import '@fontsource/martian-mono/latin-500.css';
